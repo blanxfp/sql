@@ -1,0 +1,60 @@
+-- MySQL dump 10.13  Distrib 8.0.18, for macos10.14 (x86_64)
+--
+-- Host: 127.0.0.1    Database: mydb
+-- ------------------------------------------------------
+-- Server version	8.0.18
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `proveidor`
+--
+
+DROP TABLE IF EXISTS `proveidor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `proveidor` (
+  `nif_proveidor` varchar(10) NOT NULL,
+  `nom` varchar(45) NOT NULL,
+  `carrer` varchar(45) DEFAULT NULL,
+  `num_adresa` int(11) DEFAULT NULL,
+  `pis_adresa` varchar(45) DEFAULT NULL,
+  `porta_adresa` varchar(45) DEFAULT NULL,
+  `ciutat` varchar(45) DEFAULT NULL,
+  `codi_postal` int(11) DEFAULT NULL,
+  `pais` varchar(45) DEFAULT NULL,
+  `telefon` int(11) NOT NULL,
+  `fax` int(11) DEFAULT NULL,
+  PRIMARY KEY (`nif_proveidor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `proveidor`
+--
+
+LOCK TABLES `proveidor` WRITE;
+/*!40000 ALTER TABLE `proveidor` DISABLE KEYS */;
+INSERT INTO `proveidor` VALUES ('A08119687','General Optica','CTRA. DE L\'HOSPITALET',147,NULL,NULL,'Cornellà de Llobregat',8940,'España',900626626,900626626),('A58064320','COMERCIAL ERNEST','CALLE VIA CANNETUM',8,NULL,NULL,'CANET DE MAR\nCANET DE MAR',8360,'España',937943280,937943281),('B60720497','OPTICA ARES-FOTO PI','C/ De Tierra Melide',21,NULL,NULL,'Madrid',28050,'España',933012229,933012229),('F28465193','MULTIOPTICAS','AVENIDA DE LOS REYES (PG IND LA MINA)',NULL,NULL,NULL,'Colmenar Viejo',28770,'España',918357000,918065500);
+/*!40000 ALTER TABLE `proveidor` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-04-28 12:09:05
