@@ -1,4 +1,4 @@
-SELECT UniqueCarrier, colYear, colMonth, COUNT(Cancelled)
+SELECT UniqueCarrier, colYear, colMonth, COUNT(Cancelled) as total_cancelled
 FROM Flights
 GROUP BY UniqueCarrier
-ORDER BY COUNT(Cancelled)
+ORDER BY total_cancelled
