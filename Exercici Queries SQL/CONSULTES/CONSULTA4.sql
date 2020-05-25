@@ -1,9 +1,9 @@
-SELECT USAirports.City, colYear, colMonth, AVG(ArrDelay) AS prom_arribades
-FROM Flights
-INNER JOIN USAirports
-ON Flights.Origin = USAirports.IATA
-GROUP BY flightID
+SELECT AIRP.City, FL.colYear, FL.colMonth, AVG(FL.ArrDelay) AS prom_arribades
+FROM Flights as FL
+LEFT JOIN USAirports as AIRP
+ON FL.Origin = AIRP.IATA
+GROUP BY City, colYear, colMonth
 ORDER BY
-USAirports.City,
+City,
 colYear ASC,
 colMonth ASC
